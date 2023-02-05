@@ -5,7 +5,7 @@ const apiKey = 'a7ed7b333dfdf4110c49c66c56121a07'
 
 export const ForecastData = () => {
   
-    const [dataForecast, setData] = useState()
+    const [dataForecast, setDataForecast] = useState()
     // state de dataGeo es solo para debugg
     const [dataGeo, setDataGeo] = useState()
     const [error, setError] = useState()
@@ -32,7 +32,7 @@ export const ForecastData = () => {
             setError('city and country inputs are requiered')
             return
         }
-        
+        setFirstResult(null)
         setError(null)
         setLoading(true)
 
@@ -48,12 +48,12 @@ export const ForecastData = () => {
             // segunda peticion a '5 days / 3 hours forecastData'
             const respForecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lang=es&units=metric&lat=${lat}&lon=${lon}&appid=${apiKey}`)
             const dataForecast = await respForecast.json()
-            setData(dataForecast)
+            setDataForecast(dataForecast)
             const [firstItem] = dataForecast.list
             setFirstResult(firstItem)
             setLoading(false)
         }else {
-            setData(null)
+            setDataForecast(null)
             setError('city or country are invalid')
         }
     }
