@@ -30,7 +30,7 @@ export const OpenWeather = () => {
         setLoading(true)
 
         // primera peticion a 'geoCoding'
-        const respGeoCoding = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apiKey}`)
+        const respGeoCoding = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apiKey}`)
         const dataGeo = await respGeoCoding.json()
         // desestructuracion de 'geoCoding
         const [firstItem] = dataGeo
