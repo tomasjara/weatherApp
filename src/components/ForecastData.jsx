@@ -72,7 +72,6 @@ export const ForecastData = () => {
         {error && <p style={{color: 'red'}}>{error}</p>}
         {loading && <h1>Cargando...</h1>}
         
-        
         {firstResult && 
             <>
                 <h2>{dataForecast.city.name}, {dataForecast.city.country}</h2>
