@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { ForecastData } from './components/forecastData'
-// import { OpenWeather } from './components/OpenWeather'
+import App from './App'
+// import { ForecastData } from './components/forecastData'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ForecastData />
+    <App />
   </React.StrictMode>,
 )
