@@ -17,8 +17,6 @@ export const WeatherCurrent = ({ data, loading }) => {
             const [firtsItem] = data.list
             setCity({name, country})
             setWeatherData(firtsItem)
-            console.log(city)
-            console.log(weatherData)
         } 
         
     },[data, loading])
