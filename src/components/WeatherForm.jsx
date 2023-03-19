@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useForm } from '../hooks/useForm'
 
-export const WeatherForm = ({ getData }) => {
+export const WeatherForm = ({ getCoords }) => {
 
     const [error, setError] = useState('')
     const {city, country, onInputChange} = useForm({
@@ -15,19 +15,23 @@ export const WeatherForm = ({ getData }) => {
             setError('city and country inputs are requiered')
             return
         }
-        setError('')
-        getData(city, country)
+        
+        setError()
+        getCoords(city, country)
     }
 
   return (
-    <form onSubmit={handleSubmit}>
-        <input type="text" name="city" placeholder='city' value={city} onChange={onInputChange}/>
-        <br />
-        <input type="text" name='country' placeholder='country' value={country} onChange={onInputChange}/>
-        <label htmlFor="country"> use <a href="https://www.iban.com/country-codes" target="_blank">ISO 3166</a> country codes</label>
-        <br />
-        <button>get data</button>
-        {error && <p style={{color: 'red'}}>{error}</p>}
-    </form>
+    <>
+        <form onSubmit={handleSubmit} className="form-group flex-column align-items-center ">
+            <input className='form-control mb-3' type="text" name="city" placeholder='city' value={city} onChange={onInputChange}/>
+            <br />
+            <input className='form-control' type="text" name='country' placeholder='country' value={country} onChange={onInputChange}/>
+            <label  className='text-white mb-3' htmlFor="country"> use <a href="https://www.iban.com/country-codes" target="_blank">ISO 3166</a> country codes</label>
+            <br />
+            <button className='btn btn-primary'>get data</button>
+        </form>
+        {error && <p className='text-break' style={{color: 'red'}}>{error}</p>}
+    </>
+    
   )
 }
