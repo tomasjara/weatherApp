@@ -24,7 +24,7 @@ export const WeatherResult = ({ data, loading }) => {
     },[data, loading])
 
     return (
-    <>
+    <div className="mt-4">
         {loading && <h1 className="text-white">cargando...</h1>}
         {city && 
             <div className='card bg-dark text-white border-white animate__animated animate__fadeIn '>
@@ -39,6 +39,6 @@ export const WeatherResult = ({ data, loading }) => {
                 </div>
             </div> 
         }   
-    </>
+    </div>
   )
 }
