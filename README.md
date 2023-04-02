@@ -4,7 +4,7 @@ App del clima creada con React Js / vite
 
 [Link](https://tomasjara.github.io/weather_app/) para probar la app
 
-
+![ss](/imgs/ss.png)
 
 ## install
 
