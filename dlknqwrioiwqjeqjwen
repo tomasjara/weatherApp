@@ -1,0 +1,83 @@
+[33mcommit 5f5e17e3fe24e410089fe6b27d7ceb2421890934[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sat Apr 1 00:56:42 2023 -0300
+
+    Minor updates
+
+[33mcommit 22c47651802e9f62ea1e74f378bbf14ce05ad265[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sun Mar 19 13:39:39 2023 -0300
+
+    add bootstrap, add animate.style, refractor api querys, refractor useWeatherData
+
+[33mcommit 1e2907c75632bf82da8a68a7e0f9541be02241e0[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Tue Feb 7 15:09:12 2023 -0300
+
+    readme update
+
+[33mcommit 71c98789bde98da41339a31fd9f452b57cce364b[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Tue Feb 7 15:08:49 2023 -0300
+
+    readme update
+
+[33mcommit 9904e102b0da3ae025a39dd54f6d79bdab487bc0[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Tue Feb 7 15:08:21 2023 -0300
+
+    readme update
+
+[33mcommit 5783fd31a7d71f7e224c8ef6e9034b7e376fa914[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Tue Feb 7 15:06:46 2023 -0300
+
+    add temporary readme
+
+[33mcommit a084da6654a21d8c27f6091ceb66e0c2fbe43117[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Mon Feb 6 15:52:09 2023 -0300
+
+    components restructuring
+
+[33mcommit ac0111bd68398c1979f0f474b43718aed73c8af8[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sun Feb 5 23:42:43 2023 -0300
+
+    delete openWeather component
+
+[33mcommit a30fec076fa874f8835df4305a5c058c7ee81c97[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sun Feb 5 15:27:43 2023 -0300
+
+    fixed loading render
+
+[33mcommit 5b88c61aed2876ae80b043d58b22184605c8664c[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sun Feb 5 15:17:28 2023 -0300
+
+    testing forecast data
+
+[33mcommit 20ed6222e764527667728e85f40b2bafd7850907[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sat Feb 4 21:56:12 2023 -0300
+
+    error https fixed
+
+[33mcommit d5bb6f3bb787f6da2f085caad04a0dbc6335ae8f[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sat Feb 4 17:44:50 2023 -0300
+
+    404 error
+
+[33mcommit 3c3b35ff918cb9c7b6e595e2aafe9d29f1a6b691[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sat Feb 4 17:02:58 2023 -0300
+
+    gh-pages added
+
+[33mcommit a9b90e141ecfc6ad47135e44b022c35941318063[m
+Author: tomas jara <tomasignaciojd@gmail.com>
+Date:   Sat Feb 4 16:11:02 2023 -0300
+
+    first commit

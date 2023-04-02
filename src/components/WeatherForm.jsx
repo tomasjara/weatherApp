@@ -21,8 +21,8 @@ export const WeatherForm = ({ getCoords }) => {
     }
 
   return (
-    <>
-        <form onSubmit={handleSubmit} className="form-group flex-column align-items-center col-md-9">
+    <div id='Formulario' className="col-md-6 col-sm-8 border rounded p-3 bg-dark">
+        <form onSubmit={handleSubmit} className="form-group flex-column align-items-center">
             <input className='form-control mb-3' type="text" name="city" placeholder='city' value={city} onChange={onInputChange}/>
             <br />
             <input className='form-control' type="text" name='country' placeholder='country' value={country} onChange={onInputChange}/>
@@ -30,8 +30,8 @@ export const WeatherForm = ({ getCoords }) => {
             <br />
             <button className='btn btn-primary'>get data</button>
         </form>
-        {error && <p className='text-break' style={{color: 'red'}}>{error}</p>}
-    </>
+        {error && <p className='text-break text-center' style={{color: 'red'}}>{error}</p>}
+    </div>
     
   )
 }
