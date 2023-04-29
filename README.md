@@ -1,7 +1,11 @@
 <div align='center'>
   <img  src='./public/vite.svg'> <img width='40' src='./public/react.svg'>
   
-  <strong> React js / Vite </strong>
+  <h2> React js / Vite </h2>
+  
+   Pruebala [aqui](https://tomasjara.github.io/weather_app/)
+   
+   ![screenshot](/public/sc.png)
 </div>
 
 ## Install
