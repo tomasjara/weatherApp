@@ -8,7 +8,7 @@
    ![screenshot](/imgs/sc.png)
 </div>
 
-## install
+## Install
 
 - npm install
 - npm run dev 
