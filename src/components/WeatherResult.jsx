@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react"
+import clouds from '/public/clouds.png'
+import snow from '/public/snow.png'
+import rain from '/public/rain.png'
+import clear from '/public/clear.png'
 
 export const WeatherResult = ({ data, loading, widthValue }) => {
 
     const [city, setCity] = useState()
     const [weatherData, setWeatherData] = useState()
+    const [climaUrl, setClimaUrl] = useState()
+
+    
 
     useEffect(() => {
 
@@ -17,7 +24,17 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                 const clima = data.list[0].weather[0].main.toLowerCase()
                 setCity({ name, country, coordsResult, clima })
                 setWeatherData(firstWeatherResult)
-  
+                
+                const weatherDefault = 'error'
+                const weatherOptions = {
+                    clouds: clouds ,
+                    snow: snow,
+                    rain: rain,
+                    clear: clear
+                }
+            
+                const climaOption = weatherOptions[clima] || weatherDefault
+                setClimaUrl(climaOption)
             }
         }
     }, [data, loading])
@@ -38,16 +55,16 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                         >
                             <div className="row card-header border-white row m-0">
                                 <h2 className="card-title text-center" >{city.name}</h2>
-                                <small className="card-subtitle text-center" style={{ color: '#999999' }}>{city.country} {city.coordsResult.state && `,${city.coordsResult.state}`}</small>
+                                <small className="card-subtitle text-center" style={{ color: '#999999' }}>{city.country}{city.coordsResult.state && `, ${city.coordsResult.state}`}</small>
                             </div>
 
                             <div className="row justify-content-center">
-                                <img style={{ width: '120px' }} src={`../../public/${city.clima}.png`} alt="" />
+                                <img style={{ width: '120px' }} src={climaUrl} alt="" />
                                 <h2 className="col-12 text-center">{weatherData.main.temp}°C</h2>
                             </div>
 
                             <p className="text-center" style={{ color: '#999999' }}>{weatherData.main.temp_min}°C / {weatherData.main.temp_max}°C </p>
-                          
+
                             <div className="row ">
                                 <div className="col-6">
                                     <p className="text-center m-0" style={{ color: '#999999' }}>Viento</p>
@@ -64,7 +81,7 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                     }
                 </>
             }
-{/* {`../../imgs/weather/${weatherData.weather[0].main}.png`} */}
+            {/* {`../../imgs/weather/${weatherData.weather[0].main}.png`} */}
 
         </>
     )
