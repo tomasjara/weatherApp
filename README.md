@@ -2,9 +2,9 @@
   <img  src='./imgs/vite.svg'> <img width='40' src='./imgs/react.svg'>
   
   <h2> React js / Vite </h2>
+  
+  [Link](https://tomasjara.github.io/weather_app/) para probar la app
 </div>
-
-[Link](https://tomasjara.github.io/weather_app/) para probar la app
 
 ![screenshot](/imgs/sc.png)
 
