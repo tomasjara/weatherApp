@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useForm } from '../hooks/useForm'
 
-export const WeatherForm = ({ getCoords }) => {
+export const WeatherForm = ({ getCoords, widthValue }) => {
 
     const [error, setError] = useState('')
     const { city, country, onInputChange } = useForm({
@@ -11,55 +11,32 @@ export const WeatherForm = ({ getCoords }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (city === '' || country === '') {
-            setError('city and country inputs are requiered')
+        if (city === '') {
+            setError('City are requiered')
             return
         }
-
-        setError()
+        setError('')
         getCoords(city, country)
     }
 
     return (
-        <div id='Formulario' className="col-md-9 col-sm-8 border rounded p-3 bg-dark " >
+        <>
+            <form onSubmit={handleSubmit} className={`row form-group bg-dark border rounded mx-auto w-${widthValue} p-2 mb-3 animate__animated animate__fadeInUp`}>
+                    <input
+                        className='col p-0 text-white bg-dark border-0 rounded-0  w-100 '
+                        style={{ outline: 'none' }}
+                        type="text"
+                        name="city"
+                        placeholder='Enter city'
+                        autoFocus
+                        autoComplete='off'
+                        value={city}
+                        onChange={onInputChange} />
 
-            {/* <form onSubmit={handleSubmit} className="form-group flex-column align-items-center mb-3" >
-                <input className='form-control mb-3' type="text" name="city" placeholder='city' value={city} onChange={onInputChange} />
-                <br />
-                <input className='form-control' type="text" name='country' placeholder='country' value={country} onChange={onInputChange} />
-                <label className='text-white mb-3' htmlFor="country"> use <a href="https://www.iban.com/country-codes" target="_blank">ISO 3166</a> country codes</label>
-                <br />
-                <button className='btn btn-primary'>get data</button>
-            </form> */}
+                    <button className='col-auto btn btn-primary'>Search</button>
+            </form>
 
-            {/* Formulario horizontal */}
-            <div className="row g-3 align-items-center" style={{ color: '#fff' }}>
-                <form onSubmit={handleSubmit} className="form-group" >
-                    
-                    <div className="col-auto">
-                        <label className="col-form-label">Ciudad: </label>
-                    </div>
-
-                    <div className="col-auto">
-                        <input className='form-control' type="text" name="city" placeholder='city' value={city} onChange={onInputChange} />
-                    </div>
-
-                    <div className="col-auto">
-                        <label className="col-form-label">Pais: </label>
-                    </div>
-
-                    <div className="col-auto">
-                        <input className='form-control' type="text" name='country' placeholder='country' value={country} onChange={onInputChange} />
-                        <label className='text-white mb-3' htmlFor="country"> use <a href="https://www.iban.com/country-codes" target="_blank">ISO 3166</a> country codes</label>
-                    </div>
-                    <div className="col-auto">
-                        <button className='btn btn-primary'>get data</button>
-                    </div>
-                </form>
-
-            </div>
-            {error && <p className='text-break text-center' style={{ color: 'red' }}>{error}</p>}
-        </div>
-
+            {error && <p className='text-break text-center mb-3' style={{ color: 'red' }}>{error}</p>}
+        </>
     )
 }

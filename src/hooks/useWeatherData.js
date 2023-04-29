@@ -22,7 +22,7 @@ export const useWeatherData = () => {
     const getCoords = async(city, country) => {
       setLoading(true)
 
-      await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${apiKey}`)
+      await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}}&appid=${apiKey}`)
       .then( res => res.json() )
       .then( data => {
         setCoords( data )
