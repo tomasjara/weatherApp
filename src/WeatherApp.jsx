@@ -9,13 +9,10 @@ function WeatherApp() {
 
   const screenWidth = window.screen.width
   let widthValue = 50
-  console.log(widthValue)
-
   if (screenWidth <= 768) {
     widthValue = 75
     console.log(widthValue)
   }
-
   if (screenWidth <= 576) {
     widthValue = 100
     console.log(widthValue)
