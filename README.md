@@ -1,11 +1,7 @@
- 
-# Weather app ![vite icon](/imgs/vite.svg) <img src='./imgs/react.svg' width='40'>
-React Js / vite
-
 <div align='center'>
   <img  src='./imgs/vite.svg'> <img width='40' src='./imgs/react.svg'>
   
-  <strong> React js / Vite </strong>
+  <h2> React js / Vite </h2>
 </div>
 
 [Link](https://tomasjara.github.io/weather_app/) para probar la app
