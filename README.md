@@ -3,7 +3,7 @@
   
   <h2> React js / Vite </h2>
   
-  [Link](https://tomasjara.github.io/weather_app/) para probar la app
+   Pruebala [aqui](https://tomasjara.github.io/weather_app/)
 </div>
 
 ![screenshot](/imgs/sc.png)
