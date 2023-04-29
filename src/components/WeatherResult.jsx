@@ -42,7 +42,7 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                             </div>
 
                             <div className="row justify-content-center">
-                                <img style={{ width: '120px' }} src={`../../imgs/weather/${city.clima}.png`} alt="" />
+                                <img style={{ width: '120px' }} src={`../../public/weather/${city.clima}.png`} alt="" />
                                 <h2 className="col-12 text-center">{weatherData.main.temp}°C</h2>
                             </div>
 
