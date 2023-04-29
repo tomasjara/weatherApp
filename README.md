@@ -1,18 +1,18 @@
- 
-# Weather app ![vite icon](/imgs/vite.svg) <img src='./imgs/react.svg' width='40'>
-React Js / vite
-
 <div align='center'>
   <img  src='./imgs/vite.svg'> <img width='40' src='./imgs/react.svg'>
   
+<<<<<<< HEAD
   <strong> React js / Vite </strong>
+=======
+  <h2> React js / Vite </h2>
+  
+   Pruebala [aqui](https://tomasjara.github.io/weather_app/)
+   
+   ![screenshot](/imgs/sc.png)
+>>>>>>> 070749b6c6f04693d6f1d7cea6c8871c737690f3
 </div>
 
-[Link](https://tomasjara.github.io/weather_app/) para probar la app
-
-![screenshot](/imgs/sc.png)
-
-## install
+## Install
 
 - npm install
 - npm run dev 
