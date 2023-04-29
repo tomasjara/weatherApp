@@ -4,6 +4,7 @@ React Js / vite
 
 <div align='center'>
   <img  src='./imgs/vite.svg'> <img width='40' src='./imgs/react.svg'>
+  
   <strong> React js / Vite </strong>
 </div>
 
