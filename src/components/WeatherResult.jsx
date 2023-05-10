@@ -19,12 +19,6 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
             setWeatherData(null)
         } else {
             if (data) {
-                const { city: { name, country }, list: [firstWeatherResult], coords: [coordsResult] } = data
-
-                const clima = data.list[0].weather[0].main.toLowerCase()
-                setCity({ name, country, coordsResult, clima })
-                setWeatherData(firstWeatherResult)
-                
                 const weatherDefault = 'error'
                 const weatherOptions = {
                     clouds: clouds ,
@@ -32,9 +26,15 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                     rain: rain,
                     clear: clear
                 }
-            
+                const { city: { name, country }, list: [firstWeatherResult], coords: [coordsResult] } = data
+                const clima = data.list[0].weather[0].main.toLowerCase()
                 const climaOption = weatherOptions[clima] || weatherDefault
+                
                 setClimaUrl(climaOption)
+                setCity({ name, country, coordsResult, clima })
+                setWeatherData(firstWeatherResult)
+                
+            
             }
         }
     }, [data, loading])
@@ -59,7 +59,7 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                             </div>
 
                             <div className="row justify-content-center">
-                                <img style={{ width: '120px' }} src={climaUrl} alt="" />
+                                <img className="my-3" style={{ width: '120px' }} src={climaUrl} alt="" />
                                 <h2 className="col-12 text-center">{weatherData.main.temp}°C</h2>
                             </div>
 
@@ -81,8 +81,6 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                     }
                 </>
             }
-            {/* {`../../imgs/weather/${weatherData.weather[0].main}.png`} */}
-
         </>
     )
 }

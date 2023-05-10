@@ -25,6 +25,11 @@ export const useWeatherData = () => {
       await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}}&appid=${apiKey}`)
       .then( res => res.json() )
       .then( data => {
+        if(data.length === 0) {
+          console.log('Ubicacion no encontrada')
+          setLoading(false)
+          return
+        }
         setCoords( data )
       })
       .catch( console.warn )
