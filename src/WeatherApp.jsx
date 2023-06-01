@@ -1,22 +1,16 @@
 import { WeatherResult } from "./components/WeatherResult"
 import { WeatherForm } from "./components/WeatherForm"
 import { useWeatherData } from "./hooks/useWeatherData"
-import { useEffect } from "react"
 
 function WeatherApp() {
 
   const { data, loading, getCoords } = useWeatherData()
 
+  // responsive
   const screenWidth = window.screen.width
   let widthValue = 50
-  if (screenWidth <= 768) {
-    widthValue = 75
-    console.log(widthValue)
-  }
-  if (screenWidth <= 576) {
-    widthValue = 100
-    console.log(widthValue)
-  }
+  if (screenWidth <= 768) { widthValue = 75 }
+  if (screenWidth <= 576) { widthValue = 100 }
 
   return (
     <div className="vh-100 bg-black" >

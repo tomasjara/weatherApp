@@ -36,7 +36,6 @@ export const WeatherForm = ({ getCoords, widthValue }) => {
                 <button className='col-auto btn btn-primary'>Search</button>
             </form>
 
-            {/* {error && <p className='text-break text-center mb-3' style={{ color: 'red' }}>{error}</p>} */}
             {error && <div class={`alert alert-warning alert-dismissible fade show mx-auto w-${widthValue}`} role="alert">
                 City are requiered
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

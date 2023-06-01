@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react"
-import clouds from '/public/clouds.png'
-import snow from '/public/snow.png'
-import rain from '/public/rain.png'
-import clear from '/public/clear.png'
+import clouds from '/imgs/clouds.png'
+import snow from '/imgs/snow.png'
+import rain from '/imgs/rain.png'
+import clear from '/imgs/clear.png'
 
 export const WeatherResult = ({ data, loading, widthValue }) => {
 
     const [city, setCity] = useState()
     const [weatherData, setWeatherData] = useState()
     const [climaUrl, setClimaUrl] = useState()
-
-    
 
     useEffect(() => {
 
@@ -33,8 +31,6 @@ export const WeatherResult = ({ data, loading, widthValue }) => {
                 setClimaUrl(climaOption)
                 setCity({ name, country, coordsResult, clima })
                 setWeatherData(firstWeatherResult)
-                
-            
             }
         }
     }, [data, loading])

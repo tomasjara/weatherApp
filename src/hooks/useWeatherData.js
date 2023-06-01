@@ -26,7 +26,6 @@ export const useWeatherData = () => {
       .then( res => res.json() )
       .then( data => {
         if(data.length === 0) {
-          console.log('Ubicacion no encontrada')
           setLoading(false)
           return
         }
