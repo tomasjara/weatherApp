@@ -5,7 +5,7 @@
   
    Pruebala [aqui](https://tomasjara.github.io/weather_app/)
    
-   ![screenshot](/public/sc.png)
+   ![screenshot](/imgs/sc.png)
 </div>
 
 ## Install
